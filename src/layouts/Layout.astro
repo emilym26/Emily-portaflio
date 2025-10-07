@@ -1,22 +1,93 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+const { title } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <header class="w-full py-4 px-8 flex justify-between items-center bg-white shadow-md fixed top-0 z-50">
+      <h1 class="text-xl font-bold text-indigo-600">Emily Barba</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-indigo-500 transition">Sobre mí</a>
+        <a href="#skills" class="hover:text-indigo-500 transition">Habilidades</a>
+        <a href="#projects" class="hover:text-indigo-500 transition">Proyectos</a>
+        <a href="#contact" class="hover:text-indigo-500 transition">Contacto</a>
+      </nav>
+    </header>
+      <slot />
+    <footer class="py-6 text-center text-gray-600 border-t mt-12">
+      © {new Date().getFullYear()} Emily Barba · Desarrollo de software
+    </footer>
+  </body>
 </html>
 
+
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+	/* Fuente base */
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f9fafb; /* bg-gray-50 */
+  color: #1f2937; /* text-gray-800 */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 1rem 2rem; /* py-4 px-8 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff; /* bg-white */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* shadow-md */
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+
+/* Logo */
+header h1 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  color: #4f46e5; /* text-indigo-600 */
+  margin: 0;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  gap: 1.5rem; /* space-x-6 */
+  margin-right: 5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f2937; /* text-gray-800 */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #6366f1; /* hover:text-indigo-500 */
+}
+
+/* Main con padding superior (para que no tape el header) */
+main {
+  padding-top: 5rem; /* pt-20 */
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem 0; /* py-6 */
+  text-align: center;
+  color: #4b5563; /* text-gray-600 */
+  border-top:solid #e5e7eb; /* border-t */
+  font-size: 0.9rem;
+}
+
 </style>

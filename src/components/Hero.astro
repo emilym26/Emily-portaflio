@@ -1,0 +1,155 @@
+---
+const { title, subtitle, cta } = Astro.props;
+---
+
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Hola, soy <span>Emily Barba</span></h1>
+      <p class="hero-subtitle">Desarrolladora Jr </p>
+      <a href="files/Emily Barba Valdés.pdf" class="hero-btn">Ver Curriculum</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/emily.jpg" alt="Emily Barba" />
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🌈 Hero principal */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 20%, #eef2ff, #ffffff);
+  overflow: hidden;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+/* 💫 Contenedor central */
+.hero-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* 🧠 Texto principal */
+.hero-text {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+/* 🎯 Botón */
+.hero-btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+}
+
+/* 🖼 Imagen */
+.hero-image img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+}
+
+/* 💻 Responsive layout */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* 🌟 Fondo decorativo animado (sutil) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08), transparent 70%);
+  animation: float 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+</style>

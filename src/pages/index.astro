@@ -1,11 +1,71 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portafolio | Emily Barba Valdés">
+  <!-- 🌟 Hero -->
+
+  <Hero 
+    title="Hola, soy Emily 👋"
+    subtitle="Diseñadora UI/UX & Desarrolladora Web"
+    cta="Ver Proyectos"
+    background="gradient"
+  />
+
+
+
+
+  <!-- ✨ Sobre mí -->
+  <section class="relative py-20 bg-white">
+    <div class="absolute inset-0 bg-gradient-to-b from-purple-50 to-white pointer-events-none"></div>
+    <About 
+      title="Sobre mí"
+      description="Soy una apasionada por crear experiencias digitales atractivas y funcionales. Me especializo en diseño de interfaces (UI/UX), prototipado en Figma y desarrollo frontend con enfoque en usabilidad y accesibilidad."
+    />
+  </section>
+
+  <!-- 🎨 Habilidades con efecto glass -->
+  <section class="relative py-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+    <div class="relative z-10">
+      <Skills 
+        title="Mis Habilidades"
+        items={[
+          { name: "UI/UX", icon: "🎨", level: "Avanzado" },
+          { name: "Figma", icon: "🖌️", level: "Avanzado" },
+          { name: "Frontend", icon: "💻", level: "Intermedio" },
+          { name: "Responsive Design", icon: "📱", level: "Avanzado" },
+          { name: "Git & GitHub", icon: "🌐", level: "Intermedio" }
+        ]}
+      />
+    </div>
+  </section>
+
+  <!-- 💡 Proyectos destacados con grid -->
+  <section class="py-20 bg-gray-50">
+    <Projects 
+      title="Proyectos Destacados"
+      highlight={true}
+    />
+  </section>
+
+  <!-- 📩 Contacto con degradado -->
+  <section class="relative py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative z-10">
+      <Contact 
+        title="¿Hablamos?"
+        description="Si te interesa colaborar o conocer más de mi trabajo, no dudes en escribirme."
+        email="tuemail@ejemplo.com"
+        cta="Contáctame"
+      />
+    </div>
+  </section>
 </Layout>
+
+

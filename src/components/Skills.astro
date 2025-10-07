@@ -1,0 +1,162 @@
+<section id="skills" aria-labelledby="skills-title" class="skills-section">
+  <div class="skills-container">
+    <div class="skills-header">
+      <h2 id="skills-title" class="gradient-text">Habilidades</h2>
+      <p class="subtitle">Diseño · Desarrollo · Creatividad</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Diseño UI/UX -->
+      <div class="skill-card design-card">
+        <h3>Diseño UI/UX</h3>
+        <p>Figma · Canva · Prototipado · Wireframes · Diseño responsivo · Flujos de usuario</p>
+      </div>
+
+      <!-- Desarrollo Frontend -->
+      <div class="skill-card frontend-card">
+        <h3>Desarrollo Frontend</h3>
+        <p>React · HTML · CSS · GitHub · Git Actions · Accesibilidad · Componentes reutilizables</p>
+      </div>
+
+      <!-- Pruebas y Documentación -->
+      <div class="skill-card testing-card">
+        <h3>Pruebas & Documentación</h3>
+        <p>Postman · Newman · AWS CloudWatch · Visual Studio Code · Buenas prácticas de código</p>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-card soft-card">
+        <h3>Competencias Personales</h3>
+        <p>Pensamiento analítico · Creatividad · Adaptabilidad · Comunicación · Proactividad</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🌈 Sección general */
+.skills-section {
+  background: linear-gradient(180deg, #f9f9ff 0%, #ffffff 100%);
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+/* 📦 Contenedor */
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* 🧭 Encabezado */
+.skills-header {
+  margin-bottom: 3rem;
+}
+
+.gradient-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* 🧱 Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+
+/* 💫 Tarjetas */
+.skill-card {
+  color: #1f2937;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #fff;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(124,58,237,0.08));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.15);
+}
+
+/* 🎨 Estilos por tipo */
+.design-card {
+  background: linear-gradient(145deg, #f5f3ff, #ede9fe);
+  border-left: 4px solid #8b5cf6;
+}
+
+.frontend-card {
+  background: linear-gradient(145deg, #eef2ff, #e0e7ff);
+  border-left: 4px solid #4f46e5;
+}
+
+.testing-card {
+  background: linear-gradient(145deg, #d7d4ff, #d7d4ff);
+  border-left: 4px solid #4137ff;
+}
+
+.soft-card {
+  background: linear-gradient(145deg, #e2d5ff, #e2d5ff);
+  border-left: 4px solid #7337ff;
+}
+
+/* 🧩 Texto */
+.skill-card h3 {
+  font-size: 1.25rem;
+  color: #1e1b4b;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 2rem;
+  }
+  .skill-card {
+    padding: 1.5rem;
+  }
+}
+</style>

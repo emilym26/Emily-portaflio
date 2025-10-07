@@ -1,0 +1,123 @@
+<section id="contact" aria-labelledby="contact-title" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2 id="contact-title" class="gradient-text">Contacto</h2>
+    </div>
+
+    <div class="contact-info">
+
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:emilym26b@gmail.com">emilym26b@gmail.com</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+50763879673">(+507) 6387-9673</a></li>
+        <li><strong>Ubicación:</strong> Panamá</li>
+      </ul>
+
+      <div class="socials">
+        <a href="https://github.com/" target="_blank" aria-label="GitHub" class="social-link"></a>
+        <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="social-link"></a>
+        <a href="mailto:emilym26b@gmail.com" aria-label="Email" class="social-link"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🌈 Fondo general */
+.contact-section {
+    background: radial-gradient(circle at 20% 20%, #eef2ff, #ffffff);
+  padding: 6rem 1.5rem;
+}
+
+/* 📦 Contenedor */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* 🧭 Encabezado */
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.gradient-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* 💬 Texto */
+.contact-text {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* 📋 Lista */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-list li {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* 🌐 Redes sociales */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  font-size: 1.75rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+/* ✨ Animación */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 2rem;
+  }
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+</style>

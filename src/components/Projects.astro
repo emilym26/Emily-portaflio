@@ -1,0 +1,245 @@
+---
+import type { Project } from "../data/projects";
+import { projects } from "../data/projects";
+---
+
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    <!-- 🔹 Sección de Proyectos -->
+    <h2 class="projects-title">Proyectos de Desarrollo Web</h2>
+    <p class="projects-subtitle">
+      Algunos de los proyectos que he desarrollado aplicando diseño UI/UX, código limpio y un enfoque en la experiencia de usuario.
+    </p>
+
+    <div class="projects-grid">
+      <!-- Proyecto 1 -->
+      <div class="project-card">
+        <img src="img/Gr-Emilym.png" alt="Proyecto GR Producciones">
+        <div class="project-content">
+          <span class="project-tag">Sitio Web Corporativo</span>
+          <h3>GR Producciones Editoriales</h3>
+          <p>
+            Desarrollo y diseño integral de un sitio web para una editorial. 
+            Enfoque en experiencia de usuario, navegación intuitiva y diseño responsivo adaptable a dispositivos móviles.
+          </p>
+          <div class="project-links">
+            <a href="https://drive.google.com/file/d/1pInAZc-MAHmFJSu-oDTH79RYyzPAWMPR/view?usp=sharing" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="project-card">
+        <img src="img/Up-emilym.png" alt="Dashboard React">
+        <div class="project-content">
+          <span class="project-tag">Plataforma Académica</span>
+          <h3>Moddle – Universidad de Panamá</h3>
+          <p>
+            Prototipo funcional de plataforma educativa, con énfasis en la arquitectura de la información 
+            y la organización de los contenidos académicos.
+          </p>
+          <div class="project-links">
+            <a href="https://drive.google.com/file/d/16pGMUuiNdhSZspPlc6K8h6goj32ePNRo/view?usp=sharing" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="project-card">
+        <img src="img/uvilor.jpeg" alt="E-commerce Next.js">
+        <div class="project-content">
+          <span class="project-tag">Dashboard Web</span>
+          <h3>Uvilor S.A. – Dashboard de alertas</h3>
+          <p>
+            Aplicación web para monitoreo de eventos críticos, diseñada para optimizar la toma de decisiones 
+            mediante visualizaciones en tiempo real.
+          </p>
+          <div class="project-links">
+            <a href="https://www.canva.com/design/DAG1FF6Fb88/E_mRgczXEO1UJlG4M04mvg/edit?utm_content=DAG1FF6Fb88&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Ver Proyecto</a>
+            <a href="https://github.com/emilym26/uvilor_repositorio" target="_blank">Código en GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔹 Sección de Prototipos -->
+    <h2 class="projects-title prototypes-title">Prototipos de Diseño (UI/UX)</h2>
+    <p class="projects-subtitle">
+      Prototipos creados en Figma y Canva, explorando la estructura visual, las interacciones y la experiencia de usuario.
+    </p>
+
+    <div class="projects-grid">
+      <!-- Prototipo 1 -->
+      <div class="project-card">
+        <img src="img/leche.png" alt="Prototipo de trazabilidad de leche">
+        <div class="project-content">
+          <span class="project-tag">Aplicación Móvil</span>
+          <h3>Trazabilidad de leche de vaca</h3>
+          <p>
+            Prototipo de aplicación para rastrear el origen y los procesos de la leche, garantizando calidad 
+            y seguridad alimentaria en toda la cadena de distribución.
+          </p>
+          <div class="project-links">
+            <a href="https://www.canva.com/design/DAGrk-BJrrE/wcs0dEMTBtbdEId6gpu8KQ/edit?utm_content=DAGrk-BJrrE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Ver Prototipo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prototipo 2 -->
+      <div class="project-card">
+        <img src="img/helado.jpg" alt="Prototipo de pedidos de helados">
+        <div class="project-content">
+          <span class="project-tag">E-commerce</span>
+          <h3>Pedido de helados</h3>
+          <p>
+            Prototipo de aplicación para gestionar pedidos anticipados de helados, optimizando inventario y 
+            mejorando los tiempos de entrega en tienda.
+          </p>
+          <div class="project-links">
+            <a href="https://demo-proyecto5.com" target="_blank">Ver Prototipo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prototipo 3 -->
+      <div class="project-card">
+        <img src="img/muebles.png" alt="Prototipo tienda de muebles">
+        <div class="project-content">
+          <span class="project-tag">Tienda Online</span>
+          <h3>Tienda de muebles</h3>
+          <p>
+            Diseño de experiencia de compra digital para explorar, seleccionar y administrar productos 
+            de mobiliario, con enfoque en usabilidad y organización del inventario.
+          </p>
+          <div class="project-links">
+            <a href="https://drive.google.com/file/d/1FiAE_u64trircWz-74c4MGHbh_9YdE_9/view?usp=sharing" target="_blank">Ver Prototipo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 🔹 Sección general */
+.projects-section {
+  background: linear-gradient(180deg, #fafaff 0%, #ffffff 100%);
+  padding: 5rem 1.5rem;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #4f46e5;
+  margin-bottom: 0.8rem;
+}
+
+.prototypes-title {
+  margin-top: 5rem;
+  color: #7c3aed;
+}
+
+.projects-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* 🔹 Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* 🔹 Tarjetas */
+.project-card {
+  background: #e8e7ff; /* Color suave */
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Para que el contenido se organice en columna */
+}
+
+/* Imagen */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Contenido */
+.project-content {
+  flex: 1; /* ocupa el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f1f3d;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  color: #3f3f5a;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1; /* hace que el texto empuje los enlaces hacia abajo */
+}
+
+/* 🔹 Etiquetas */
+.project-tag {
+  display: inline-block;
+  background: #dcdafc;
+  color: #4338ca;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Enlaces */
+.project-links {
+  margin-top: auto; /* fuerza que se alineen abajo */
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  color: #4338ca;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background: transparent;   /* sin color de fondo */
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.project-links a:hover {
+  background: #7c3aed;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+</style>
